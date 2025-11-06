@@ -37,10 +37,10 @@ app.use(
 );
 app.use(bodyParser.json());
 
+app.use(morgan("dev"));
+
 // Use routes as a module (see index.js)
 require("./routes")(app, router);
-
-app.use(morgan("dev"));
 
 // Start the server
 app.listen(port);
